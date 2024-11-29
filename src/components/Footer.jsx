@@ -1,90 +1,78 @@
 import React from 'react';
-import { Divider } from '@mui/material';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import Form from './Form';
+import foot1 from "../assets/instagram-2-2.png";
+import foot2 from "../assets/facebook-2-2.png";
+import foot3 from "../assets/linkedin-1-2-2.png";
+import foot4 from "../assets/logo-stacked-1.png"
+
 const Footer = () => {
   return (
-    <>
-    <Form/>
-    <div className='bg-[#161515] text-white text-center p-12 md:text-left'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 '>
-          <div className='m-5 flex flex-col items-center'>
-            <div className='flex space-x-4 mb-4'>
-            <img src="/public/bbhjklopiu-1@2x.png" alt="Image 1" className="w-64 xl:w-96 lg:w-80 md:w-64 sm:w-48 xs:w-32" />
-            </div>
+    <div className="bg-[#171717] text-white py-12">
+      <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row justify-between lg:justify-start lg:space-x-24">
+        
+        <div className="flex flex-col items-center lg:items-start lg:mr-24 mb-12 lg:mb-0">
+          <img src={foot4} alt="Logo" className="mb-8" />
+          <div className="flex space-x-6 ml-[3rem]">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src={foot2} alt="Facebook" className="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={foot1} alt="Instagram" className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src={foot3} alt="LinkedIn" className="w-7 h-7" />
+            </a>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 text-center lg:text-left lg:mr-auto">
+    
+          <div className="mb-8 lg:mb-0">
+            <h3 className="text-lg font-semibold mb-4">Manufacturer / Importer</h3>
+            <p className="text-gray-400 leading-relaxed">
+              VJ Capacitors Pvt. Ltd.<br />
+              Corporate Office:<br />
+              D-24 Sector 59 Noida<br />
+              201307 U.P. (India)<br />
+              Corporate Identity Number (CIN):<br />
+              U31908UP2013PTC056512<br />
+            </p>
+          </div>
+
+          <div className="mb-8 lg:mb-0">
+            <h3 className="text-lg font-semibold mb-4">Quick Access</h3>
+            <p className="text-gray-400 leading-relaxed">
+              About Us<br />
+              Contact Us<br />
+              Products<br />
+              Infrastructure<br />
+              Gallery<br />
+              Downloads<br />
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Find Us:</h3>
+            <div className="rounded-lg overflow-hidden shadow-lg w-full lg:w-auto">
             
-
-            <div className='flex flex-col items-center md:items-start mb-4'>
-    <p className='text-lg mb-2'>Plot-108 Sector 59, NOIDA, Uttar Pradesh, <br />India, PIN-201301</p>
-    <p className='text-lg mb-2'>Phone: +9871575571</p>
-    <p className='text-lg'>Email: info@example.com</p>
-  </div>
-  <div className='flex space-x-4 md:justify-start md:w-full'>
-              <a href=''>
-                <FacebookOutlinedIcon fontSize='large' className='transition duration-300 ease-in-out transform hover:scale-125' style={{ color: '#FFFFFF' }} />
-              </a>
-              <a href=''>
-      <TwitterIcon fontSize='large' className='transition duration-300 ease-in-out transform hover:scale-125' style={{ color: '#FFFFFF' }} />
-      </a>
-              <a href=''>
-                <InstagramIcon fontSize='large' className='transition duration-300 ease-in-out transform hover:scale-125' style={{ color: '#FFFFFF' }} />
-              </a>
-              <a href=''>
-                <LinkedInIcon fontSize='large' className='transition duration-300 ease-in-out transform hover:scale-125' style={{ color: '#FFFFFF' }} />
-              </a>
-
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.209101588116!2d-122.41941528468388!3d37.774929179758675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f1c0a4f4f%3A0xdb0ffdd58f76e131!2sVJ%20Capacitors!5e0!3m2!1sen!2sin!4v1631523499292!5m2!1sen!2sin"
+                width="100%" 
+                height="200" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
-          <div className='flex flex-col md:flex-row mt-10 lg:flex-nowrap flex-wrap' >
-  <div className='flex-1 min-w-[200px] m-5'>
-    <h3 className='text-2xl font-bold'>Education</h3>
-    <ul className='mt-6 text-sm md:text-base '>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/'>Home</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/aboutus'>About us</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/products'>Products</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/aboutus'>Our Team</a></li>
-    </ul>
-  </div>
-  <div className='flex-1 min-w-[200px] m-5'>
-    <h3 className='text-2xl font-bold'>Business</h3>
-    <ul className='mt-6 text-sm md:text-base '>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/contactus'>Contact Us</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/faqs'>Faqs</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/blogs'>Blogs</a></li>
-    </ul>
-  </div>
-  <div className='flex-1 min-w-[200px] m-5'>
-    <h3 className='text-2xl font-bold'>Developer & IT</h3>
-    <ul className='mt-6 text-sm md:text-base '>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline transition-all duration-300'><a href='/coatedabrasives'>Coated Abrasives</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/diamondcuttingblades'>Diamond Cutting Blades</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/steelgrindingdisc'>Steel & Grinding Disc</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/flapdisc'>Flap Disc</a></li>
-    </ul>
-  </div>
-  <div className='flex-1 min-w-[200px] m-5'>
-    <h3 className='text-2xl font-bold'>Company</h3>
-    <ul className='mt-6 text-sm md:text-base'>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline transition-all duration-300'><a href='/coatedabrasives'>Coated Abrasives</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/diamondcuttingblades'>Diamond Cutting Blades</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/steelgrindingdisc'>Steel & Grinding Disc</a></li>
-      <li className='pb-3 hover:text-[#FE5E15] hover:underline'><a href='/flapdisc'>Flap Disc</a></li>
-    </ul>
-  </div>
-</div>
         </div>
+        
+      </div>
+      <div className="bg-[#1d1d1d] py-4 mt-8 text-center">
+        <p className="text-white italic">© Copyright 2024 VJ Capacitors Pvt Ltd. All rights reserved.</p>
       </div>
     </div>
-    <div className='bg-gray-200 py-6 md:py-8 lg:py-10 xl:py-12 text-center'>
-  <p className='italic text-sm md:text-base lg:text-lg'>Made in India</p>
-</div>
-
-</>
   );
-}
+};
 
 export default Footer;

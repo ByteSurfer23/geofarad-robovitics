@@ -1,0 +1,44 @@
+.carousel-container {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("src\assets\BG.png") no-repeat center;
+  background-size: cover;
+}
+
+.carousel-item {
+  filter: blur(5px);
+}
+
+.carousel-content-header {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.carousel-content-caption {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.carousel-button {
+  background-color: #f04e23;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #d04020;
+}
+
+.carousel-dots span {
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.carousel-dots span.bg-red-700 {
+  background-color: #f04e23;
+}

@@ -1,0 +1,212 @@
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 6.5rem;
+  background-color: #fff;
+}
+
+.about-section-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: -3.5rem;
+  position: relative;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.about-section-title::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  top: 16px;
+  left: 44%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .about-section-title::before {
+    width: 0;
+  }
+}
+
+.images-section {
+  width: 40%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.image-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  /* Make the first column larger */
+  gap: 10px;
+}
+
+.image-item:first-child {
+  grid-column: 1 / 2;
+  /* Span the first column */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.text-section {
+  width: 50%;
+  padding-left: 30px;
+  color: #191919;
+}
+
+.headline {
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff3c43;
+  line-height: 44px;
+  letter-spacing: -0.68px;
+}
+
+.description,
+.vision {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #808285;
+  margin: 20px 0;
+}
+
+.founder-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.founder-image {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.founder-text h2,
+.founder-text p {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+.founder-text h2 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.founder-text p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #808285;
+}
+
+.read-more-button {
+  background-color: #ff3c43;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .images-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .text-section {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .headline {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .description,
+  .vision {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  .founder-text h2 {
+    font-size: 22px;
+  }
+
+  .founder-text p {
+    font-size: 16px;
+  }
+
+  .read-more-button {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .images-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .text-section {
+    width: 100%;
+  }
+
+  .headline {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .description,
+  .vision {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .read-more-button {
+    padding: 10px 25px;
+  }
+}

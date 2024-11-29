@@ -1,10 +1,11 @@
 import React from 'react';
 import about from '../assets/about.png';
+import './Mission.css';
 
 function Mission() {
     return (
         <section className=" mb-20 px-10">
-          <h2 className="text-xl font-light">Mission & Vision</h2>
+          <h2 className="text-xl font-light Mission-title">Mission & Vision</h2>
           <h3 className="text-red-500 text-3xl font-bold mt-2">
           Enhancing power quality <br />and energy efficiency
           </h3>

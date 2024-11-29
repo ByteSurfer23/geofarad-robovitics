@@ -1,35 +1,33 @@
-import React from 'react';
+import React from "react";
+import "./CarouselContent.css";
 
 const CarouselContent = ({ label, big_img, small_img, caption }) => {
   return (
-    <div className="relative w-full h-full p-12 sm:p-16 flex flex-col justify-between">
+    <div className="relative w-full h-full p-12 sm:p-16 flex justify-between items-center">
       {/* Text Section */}
-      <div className=" flex flex-col items-start text-left mb-12 sm:mb-0">
-        <header className="text-white font-bold text-2xl sm:text-4xl mb-4">
-          {label}
-        </header>
-        <p className="text-white text-lg sm:text-xl mb-6">
-          {caption}
-        </p>
-        <button className="bg-white text-gray-800 px-6 py-3 rounded w-auto text-lg hover:bg-gray-200">
-          Explore Now
+      <div className="flex flex-col items-start text-left max-w-md text-section-carousel">
+        <header className="text-white font-bold text-4xl mb-4">{label}</header>
+        <p className="text-white text-lg mb-6 leading-relaxed">{caption}</p>
+        <button className="bg-red-500 text-white px-6 py-3 rounded text-lg hover:bg-red-600">
+          Explore
         </button>
       </div>
-      
+
       {/* Image Section */}
-      <div className="flex items-end justify-end mb-4 space-x-4">
+      <div className="flex items-end space-x-4 image-section-carousel">
         <img
           src={big_img}
-          alt="Big"
-          className="h-32 md:h-64 lg:h-96 md:w-auto rounded-lg"
+          alt="Big Capacitor"
+          className="h-48 md:h-64 lg:h-96 w-auto object-contain rounded-lg big-image"
         />
-        <img
-          src={small_img}
-          alt="Small"
-          className="h-24 md:h-48 lg:h-80 md:w-auto rounded-lg"
-        />
-        <div className='absolute right-0 -bottom-30 bg-white h-24 md:h-48 lg:h-80 w-10 rounded-lg' style={{ transform: 'translateX(10%)' }}></div>
-        
+        {small_img.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Small Capacitor ${index + 1}`}
+            className="h-24 md:h-32 lg:h-48 w-auto object-contain rounded-lg"
+          />
+        ))}
       </div>
     </div>
   );

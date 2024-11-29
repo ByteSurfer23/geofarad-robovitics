@@ -1,0 +1,114 @@
+.infrastructure-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+  justify-content: center; /* Center content when stacked */
+}
+
+.infrastructure-content {
+  width: 40vw;
+  margin-left: 2%;
+  /* Adjusted from 15% to 10% to shift content left */
+}
+
+.infra_pic {
+  width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 50vh; /* Limit the maximum height */
+}
+
+.line {
+  position: absolute;
+  top: 20%;
+  left: 86%;
+  height: 30vh;
+  z-index: -1;
+}
+
+.polygon {
+  position: absolute;
+  top: 47%;
+  left: 117%;
+  height: 15px;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  top: 30%;
+  left: 104%;
+  height: 13px;
+  z-index: -1;
+}
+
+/* Make text responsive */
+.infra-caption {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #ff3c43;
+}
+
+.infra-heading {
+  color: #000;
+  text-align: center;
+  border-bottom: 3px solid #000;
+  line-height: 0.1em;
+  width: 10%;
+  margin-bottom: 1rem;
+}
+
+.infra-heading span {
+  background: #fff;
+  margin-left: 60%;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.expandable, .expanded {
+  color: #a0a1a3;
+}
+
+.expanded {
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.more {
+  padding: 10px;
+  margin: 5% 0;
+  background-color: #ff3c43;
+  color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .infrastructure-container {
+    flex-direction: column; /* Stack content vertically */
+    padding: 1rem; /* Add padding */
+  }
+
+  .infrastructure-content, .infra_pic {
+    width: 90%; /* Full width for smaller screens */
+    margin: 0 auto; /* Center content */
+  }
+
+  .infra_pic {
+    max-height: 40vh; /* Reduce maximum height on smaller screens */
+  }
+
+  .line, .polygon, .circle {
+    display: none; /* Hide decorative elements on smaller screens */
+  }
+
+  .infra-caption {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .infra-heading {
+    width: 20%; /* Expand width for smaller screens */
+  }
+
+  .more {
+    margin: 3% 0;
+  }
+}

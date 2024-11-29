@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  .text-section-carousel {
+    margin-top: -800px;
+    max-height: 2vh;
+    max-width: 10vw;
+  }
+  .image-section-carousel {
+    position: absolute;
+    top: 50%;
+  }
+  .big-image {
+    max-width: 120px;
+    max-height: 120px;
+    margin-left: -10px;
+  }
+}
